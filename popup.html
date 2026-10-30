@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8">
   <style>
-    body { width: 260px; margin: 0; padding: 14px; font: 14px/1.5 -apple-system, "Segoe UI", "Malgun Gothic", sans-serif; color: #1f2430; }
-    label { display: flex; gap: 8px; align-items: center; cursor: pointer; }
+    body { width: 270px; margin: 0; padding: 14px; font: 14px/1.5 -apple-system, "Segoe UI", "Malgun Gothic", sans-serif; color: #1f2430; }
+    label { display: flex; gap: 8px; align-items: center; cursor: pointer; margin-bottom: 8px; }
     p { margin: 10px 0 0; font-size: 12px; color: #6b7285; }
     @media (prefers-color-scheme: dark) { body { background: #181b22; color: #e6e9f0; } p { color: #9aa2b8; } }
   </style>
 </head>
 <body>
   <label><input type="checkbox" id="auto"> 드래그하면 바로 번역</label>
-  <p>PDF는 텍스트를 선택한 뒤 우클릭 → "한국어로 번역"을 누르세요.</p>
+  <label><input type="checkbox" id="pdf"> PDF를 내장 뷰어로 열기</label>
+  <p>PDF 뷰어를 끄면 크롬 기본 뷰어가 열리고, 이 경우 PDF에서는 번역되지 않습니다.</p>
   <script src="popup.js"></script>
 </body>
 </html>
