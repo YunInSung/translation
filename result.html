@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>번역 결과</title>
+  <style>
+    body { margin: 0; padding: 16px; font: 14px/1.6 -apple-system, "Segoe UI", "Malgun Gothic", sans-serif; color: #1f2430; background: #fff; }
+    h2 { margin: 0 0 6px; font-size: 12px; color: #6b7285; font-weight: 600; }
+    .box { padding: 10px 12px; border-radius: 8px; background: #f3f5f9; white-space: pre-wrap; word-break: break-word; margin-bottom: 14px; }
+    #translated { background: #e8f0fe; }
+    #translated.err { background: #fde8e8; color: #7a1f24; }
+    button { font: inherit; padding: 6px 12px; border: 1px solid #c5cbd8; border-radius: 6px; background: #fff; cursor: pointer; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #181b22; color: #e6e9f0; }
+      .box { background: #232733; }
+      #translated { background: #1d2b4a; }
+      #translated.err { background: #4a1d21; color: #ffd6d9; }
+      button { background: #232733; color: inherit; border-color: #3a4054; }
+    }
+  </style>
+</head>
+<body>
+  <h2>번역</h2>
+  <div id="translated" class="box">번역 중…</div>
+  <h2>원문</h2>
+  <div id="original" class="box"></div>
+  <button id="copy" type="button">번역 복사</button>
+  <script src="result.js"></script>
+</body>
+</html>

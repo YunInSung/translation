@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "논문 번역기",
+  "version": "0.1.0",
+  "description": "영어 논문을 드래그하면 한국어로 번역합니다. 웹페이지는 툴팁, PDF는 우클릭 메뉴로 번역합니다.",
+  "permissions": ["contextMenus", "storage"],
+  "host_permissions": ["https://translate.googleapis.com/*"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "논문 번역기",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
